@@ -37,18 +37,21 @@ document.getElementById("equal").addEventListener("click", function(){
     let currentValue = document.getElementById("display").value;
     currentValue = parseInt(currentValue);  
     if (doAdd!==""){
-        document.getElementById("display").value=eval(parseInt(doAdd)+currentValue);
+        document.getElementById("display").value = eval(parseInt(doAdd)+currentValue);
     } else
     if (doSub!==""){
-        document.getElementById("display").value=eval(parseInt(doSub)-currentValue);
+        document.getElementById("display").value = eval(parseInt(doSub)-currentValue);
     } else
     if (doMul!==""){
-        document.getElementById("display").value=eval(parseInt(doMul)*currentValue);
+        document.getElementById("display").value = eval(parseInt(doMul)*currentValue);
     } else
     if (currentValue===0){
         alert('Invalid value!');
     } else
     if (doDiv!==""){
-        document.getElementById("display").value=eval(parseInt(doDiv)/currentValue);
+        document.getElementById("display").value = eval(parseInt(doDiv)/currentValue);
     } 
 });
+function changeValue(o){
+     document.getElementById("display").value+= parseInt(o.innerHTML);
+    }
