@@ -1,0 +1,22 @@
+table{
+    width:200px;
+    height:300px;
+}
+
+input{
+    height: 100%;
+    width: 100%;
+    font-size: 40px;
+    line-height: 0%;
+}
+button{
+    width: 55px;
+    height: 100%;
+    margin: 3px;
+}
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    
+    -webkit-appearance: none;
+    margin: 0; 
+}
