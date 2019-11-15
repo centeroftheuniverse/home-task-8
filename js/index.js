@@ -3,44 +3,52 @@ let doDiv;
 let doSub;
 let doMul;
 document.getElementById("add").addEventListener("click", function(){
-    parseInt(doAdd) = document.getElementById("display").value;
-    doDiv = NaN;
-    doSub = NaN;
-    doMul = NaN;
-    document.getElementById("display").value=NaN;
+    doAdd = document.getElementById("display").value;
+    doDiv = "";
+    doSub = "";
+    doMul = "";
+    document.getElementById("display").value="";
 });
 document.getElementById("sub").addEventListener("click", function(){
-    doAdd = NaN;
-    doDiv = NaN;
+    doAdd = "";
+    doDiv = "";
     doSub = document.getElementById("display").value;
-    doMul = NaN;
-    document.getElementById("display").value=NaN;
+    doMul = "";
+    document.getElementById("display").value="";
 });
 document.getElementById("div").addEventListener("click", function(){
-    doAdd = NaN;
+    doAdd = "";
     doDiv = document.getElementById("display").value;
-    doSub = NaN;
-    doMul = NaN;
-    document.getElementById("display").value=NaN;
+    doSub = "";
+    doMul = "";
+    document.getElementById("display").value="";
 });
 document.getElementById("mul").addEventListener("click", function(){
-    doAdd = NaN;
-    doDiv = NaN;
-    doSub = NaN;
+    doAdd = "";
+    doDiv = "";
+    doSub = "";
     doMul = document.getElementById("display").value;
-    document.getElementById("display").value=NaN;
+    document.getElementById("display").value="";
 });
 document.getElementById("clear").addEventListener("click", function(){    
-    document.getElementById("display").value=NaN;
+    document.getElementById("display").value="";
 });
 document.getElementById("equal").addEventListener("click", function(){
-    var i = document.getElementById("display").value;
-    i=parseInt(i);
-    // document.getElementById("display").value=eval(i*i);
-
-    if (doAdd!==NaN){
-        document.getElementById("display").value=eval(i*i);
-    }
-    
-    
+    let currentValue = document.getElementById("display").value;
+    currentValue = parseInt(currentValue);  
+    if (doAdd!==""){
+        document.getElementById("display").value=eval(parseInt(doAdd)+currentValue);
+    } else
+    if (doSub!==""){
+        document.getElementById("display").value=eval(parseInt(doSub)-currentValue);
+    } else
+    if (doMul!==""){
+        document.getElementById("display").value=eval(parseInt(doMul)*currentValue);
+    } else
+    if (currentValue===0){
+        alert('Invalid value!');
+    } else
+    if (doDiv!==""){
+        document.getElementById("display").value=eval(parseInt(doDiv)/currentValue);
+    } 
 });
